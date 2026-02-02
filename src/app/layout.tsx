@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "LiEstética",
+  title: "Estética Liliana Iturres",
   description: "Estética y cosmetología",
 };
 
