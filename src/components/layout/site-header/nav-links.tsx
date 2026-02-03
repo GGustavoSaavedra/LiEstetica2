@@ -3,21 +3,16 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/cn";
-
-const LINKS = [
-  { label: "Home", href: "/" },
-  { label: "Tratamientos", href: "/tratamientos" },
-  { label: "Sobre mi", href: "/sobre-mi" },
-] as const;
+import { NAV_ITEMS } from "@/lib/nav";
 
 export function NavLinks() {
   const pathname = usePathname();
 
   return (
-    <nav className="hidden md:flex items-center gap-8">
-      {LINKS.map((l) => {
-        const isActive = pathname === l.href;
-
+    <nav className="hidden items-center gap-8 md:flex">
+      {NAV_ITEMS.map((l) => {
+        const isActive =
+          l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
         return (
           <Link
             key={l.href}
