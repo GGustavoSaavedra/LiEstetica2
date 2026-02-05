@@ -55,12 +55,22 @@
   }
 
   @layer utilities {
+    /* Shapes orgánicos */
     .organic-shape-1 {
       border-radius: 56% 44% 36% 64% / 46% 56% 44% 54%;
     }
 
+    .organic-shape-2 {
+      border-radius: 38% 62% 52% 48% / 52% 44% 56% 48%;
+    }
+
+    /* Animaciones */
     .animate-float {
       animation: float 6s ease-in-out infinite;
+    }
+
+    .animate-spin-slow {
+      animation: spin 14s linear infinite;
     }
 
     @keyframes float {
@@ -70,6 +80,15 @@
       }
       50% {
         transform: translate3d(0, -10px, 0);
+      }
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
       }
     }
   }
