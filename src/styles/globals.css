@@ -54,9 +54,33 @@
     z-index: -1;
   }
 
+  @layer utilities {
+    .organic-shape-1 {
+      border-radius: 56% 44% 36% 64% / 46% 56% 44% 54%;
+    }
+
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%,
+      100% {
+        transform: translate3d(0, 0, 0);
+      }
+      50% {
+        transform: translate3d(0, -10px, 0);
+      }
+    }
+  }
+
   @keyframes theme-scale {
     to {
       mask-size: 350vmax;
     }
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
