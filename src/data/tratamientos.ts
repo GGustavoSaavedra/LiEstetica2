@@ -155,7 +155,8 @@ export const tratamientos: Tratamiento[] = [
     title: "Nutrición",
     category: "facial",
     order: 3,
-    shortDescription: "Activos para fortalecer, mejorar confort y luminosidad.",
+    shortDescription:
+      "Activos que devuelven confort, hidratación y luminosidad.",
     description:
       "Tratamiento de nutrición para pieles apagadas o con barrera debilitada. Se seleccionan activos según evaluación.",
     duration: "50–60 min",
@@ -185,7 +186,7 @@ export const tratamientos: Tratamiento[] = [
     category: "facial",
     order: 5,
     shortDescription:
-      "Exfoliación física superficial para una piel más suave y luminosa.",
+      "Exfoliación física superficial para una piel más suave y luminosa desde la primera sesión.",
     description:
       "Exfoliación superficial para mejorar textura y luminosidad. Se indica según tipo de piel y se realiza con técnica profesional.",
     duration: "45–60 min",
