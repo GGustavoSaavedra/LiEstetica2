@@ -1,6 +1,7 @@
 import { Hero } from "@/components/home/hero";
 import { FeaturedTreatments } from "@/components/home/featured-treatments";
 import { About } from "@/components/home/about";
+import { ServiceModes } from "@/components/home/service-modes";
 
 export default function HomePage() {
   return (
@@ -8,6 +9,7 @@ export default function HomePage() {
       <Hero />
       <About />
       <FeaturedTreatments />
+      <ServiceModes />
     </>
   );
 }

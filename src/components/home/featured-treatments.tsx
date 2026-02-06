@@ -40,13 +40,9 @@ export function FeaturedTreatments() {
     <section id="services" className="py-24 sm:py-28">
       <Container>
         <div className="mx-auto mb-14 max-w-2xl text-center sm:mb-20">
-          <span className="mb-4 block text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
+          <span className="mb-4 block text-3xl font-bold uppercase tracking-[0.3em] text-primary">
             Tratamientos
           </span>
-
-          <h2 className="font-serif text-4xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-5xl">
-            Bienestar integral
-          </h2>
 
           <p className="mt-4 text-neutral-600 dark:text-neutral-300">
             Elegí un área y descubrí qué tratamiento se adapta mejor a vos.
