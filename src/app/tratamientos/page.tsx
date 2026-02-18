@@ -31,7 +31,7 @@ export default function Page() {
             <h2 className="font-serif text-2xl tracking-tight text-slate-900 dark:text-slate-100">
               Corporales
             </h2>
-            <div className="h-px flex-1 bg-linear-to-r from-primary/70 via-secondary/30 to-transparent" />
+            <div className="h-px w-24 bg-linear-to-r from-primary/70 via-secondary/30 to-transparent sm:flex-1 sm:w-auto" />
           </div>
 
           <TreatmentsGrid items={corporales} />
@@ -42,7 +42,7 @@ export default function Page() {
             <h2 className="font-serif text-2xl tracking-tight text-slate-900 dark:text-slate-100">
               Faciales
             </h2>
-            <div className="h-px flex-1 bg-linear-to-r from-primary/70 via-secondary/30 to-transparent" />
+            <div className="h-px w-24 bg-linear-to-r from-primary/70 via-secondary/30 to-transparent sm:flex-1 sm:w-auto" />
           </div>
 
           <TreatmentsGrid items={faciales} />

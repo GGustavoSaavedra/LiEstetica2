@@ -24,10 +24,11 @@ export function TreatmentCard({ item }: Props) {
         "border-slate-200 bg-white hover:-translate-y-0.5 hover:shadow-md",
         "hover:ring-1 hover:ring-primary/30",
         "dark:border-slate-800 dark:bg-slate-900/60 dark:hover:ring-secondary/25",
+        "w-full max-w-105",
       )}
     >
       <Link href={href} className="block focus:outline-none">
-        <div className="relative h-40 w-full sm:h-44">
+        <div className="relative h-36 w-full sm:h-44">
           <Image
             src={imgSrc}
             alt={item.title}

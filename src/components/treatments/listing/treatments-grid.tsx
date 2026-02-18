@@ -7,7 +7,7 @@ type Props = {
 
 export function TreatmentsGrid({ items }: Props) {
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 justify-items-center">
       {items.map((t) => (
         <TreatmentCard key={t.slug} item={t} />
       ))}
