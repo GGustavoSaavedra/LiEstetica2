@@ -10,7 +10,7 @@ type Props = {
 
 function getImageSrc(t: Tratamiento) {
   const folder = t.category === "corporal" ? "corporales" : "faciales";
-  return `/tratamientos/${folder}/${t.slug}.png`;
+  return `/tratamientos/${folder}/${t.slug}.webp`;
 }
 
 export function TreatmentCard({ item }: Props) {
