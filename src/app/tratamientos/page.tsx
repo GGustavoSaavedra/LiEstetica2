@@ -1,10 +1,14 @@
 import { Container } from "@/components/layout/container";
 import { TreatmentsGrid } from "@/components/treatments/listing/treatments-grid";
 import { getTratamientosByCategory } from "@/lib/tratamientos";
+import { SOCIAL } from "@/data/social";
 
 export default function Page() {
   const corporales = getTratamientosByCategory("corporal");
   const faciales = getTratamientosByCategory("facial");
+  const whatsappUrl = `https://wa.me/${SOCIAL.whatsapp.phoneE164}?text=${encodeURIComponent(
+    SOCIAL.whatsapp.defaultMessage,
+  )}`;
 
   return (
     <main className="py-10 sm:py-14">
@@ -46,6 +50,39 @@ export default function Page() {
           </div>
 
           <TreatmentsGrid items={faciales} />
+        </section>
+
+        <section className="mt-20">
+          <div className="rounded-3xl bg-cream/40 p-10 text-center dark:bg-slate-900/80">
+            <h3 className="font-serif text-3xl tracking-tight text-slate-900 dark:text-slate-100">
+              ¿No sabés cuál es el tratamiento ideal para vos?
+            </h3>
+
+            <p className="mx-auto mt-3 max-w-xl text-slate-600 dark:text-slate-300">
+              Podemos evaluarlo juntas y definir la mejor opción según tu
+              objetivo y tipo de piel.
+            </p>
+
+            <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-primary px-6 py-3 font-medium text-white shadow-soft transition hover:opacity-90"
+              >
+                Reservar turno por WhatsApp
+              </a>
+
+              <a
+                href={SOCIAL.instagram.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-primary/30 px-6 py-3 font-medium text-primary dark:text-secondary transition hover:bg-primary/5 dark:hover:bg-secondary/10"
+              >
+                Ver Instagram
+              </a>
+            </div>
+          </div>
         </section>
       </Container>
     </main>
