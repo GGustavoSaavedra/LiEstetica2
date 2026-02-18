@@ -2,6 +2,7 @@ import { Container } from "@/components/layout/container";
 import { TreatmentsGrid } from "@/components/treatments/listing/treatments-grid";
 import { getTratamientosByCategory } from "@/lib/tratamientos";
 import { SOCIAL } from "@/data/social";
+import { cn } from "@/lib/cn";
 
 export default function Page() {
   const corporales = getTratamientosByCategory("corporal");
@@ -53,34 +54,48 @@ export default function Page() {
         </section>
 
         <section className="mt-20">
-          <div className="rounded-3xl bg-cream/40 p-10 text-center dark:bg-slate-900/80">
-            <h3 className="font-serif text-3xl tracking-tight text-slate-900 dark:text-slate-100">
-              ¿No sabés cuál es el tratamiento ideal para vos?
-            </h3>
+          <div
+            className={cn(
+              "relative overflow-hidden rounded-3xl border px-10 py-16 text-center",
+              "border-slate-200 bg-cream/35",
+              "dark:border-white/5 dark:bg-black/55",
+            )}
+          >
+            <div className="pointer-events-none absolute -top-28 left-1/2 h-64 w-155 -translate-x-1/2 rounded-full bg-primary/18 blur-3xl" />
 
-            <p className="mx-auto mt-3 max-w-xl text-slate-600 dark:text-slate-300">
-              Podemos evaluarlo juntas y definir la mejor opción según tu
-              objetivo y tipo de piel.
-            </p>
+            <div className="pointer-events-none absolute -top-28 left-1/2 hidden h-64 w-155 -translate-x-1/2 rounded-full bg-primary/15 blur-3xl dark:block" />
 
-            <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full bg-primary px-6 py-3 font-medium text-white shadow-soft transition hover:opacity-90"
-              >
-                Reservar turno por WhatsApp
-              </a>
+            <div className="pointer-events-none absolute inset-0 hidden dark:block dark:bg-linear-to-b dark:from-white/5 dark:to-transparent" />
 
-              <a
-                href={SOCIAL.instagram.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-primary/30 px-6 py-3 font-medium text-primary dark:text-secondary transition hover:bg-primary/5 dark:hover:bg-secondary/10"
-              >
-                Ver Instagram
-              </a>
+            <div className="relative">
+              <h3 className="font-serif text-3xl tracking-tight text-slate-900 dark:text-slate-100">
+                ¿No sabés cuál es el tratamiento ideal para vos?
+              </h3>
+
+              <p className="mx-auto mt-3 max-w-xl text-slate-600 dark:text-slate-300">
+                Podemos evaluarlo juntas y definir la mejor opción según tu
+                objetivo y tipo de piel.
+              </p>
+
+              <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full bg-primary px-6 py-3 font-medium text-white shadow-soft transition hover:opacity-90 dark:shadow-[0_0_35px_rgba(218,159,113,0.18)]"
+                >
+                  Reservar turno por WhatsApp
+                </a>
+
+                <a
+                  href={SOCIAL.instagram.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-primary/30 px-6 py-3 font-medium text-primary transition hover:bg-primary/5 dark:border-white/10 dark:text-slate-100 dark:hover:bg-white/5"
+                >
+                  Ver Instagram
+                </a>
+              </div>
             </div>
           </div>
         </section>
